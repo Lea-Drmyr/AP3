@@ -29,7 +29,7 @@ class Adherents_Model extends Model
 }
     public function GetAllAdherent()
     {
-         $db = \Config\Database::connect();
+         $db = \Config\Database::connect(); 
         $query = $this->db->query("EXEC GetAllAdherent");
         return $query->getResultArray(); 
     }

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>Liste des Adhérents</h1>
+    <h1>Liste des Adhérents : </h1>
 
     <table border="3">
         <thead>
