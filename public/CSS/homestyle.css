@@ -1,0 +1,88 @@
+/* ===================== STYLE GLOBAL ===================== */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #efcde5; /* couleur de fond douce */
+    margin: 0;
+    padding: 0;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ===================== NAVBAR ===================== */
+#mainNav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #444 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #444 !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000 !important;
+}
+
+/* ===================== HEADER ===================== */
+.masthead {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.site-heading h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.site-heading .subheading {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* ===================== MAIN CONTENT ===================== */
+main {
+    padding: 40px 0;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+footer .list-inline {
+    margin-bottom: 10px;
+}
+
+footer .fa-stack {
+    color: #444;
+    transition: color 0.2s ease;
+}
+
+footer .fa-stack:hover {
+    color: #000;
+}
+
+footer .small {
+    color: #666;
+}

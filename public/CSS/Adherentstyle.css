@@ -1,0 +1,152 @@
+/* ===================== STYLE GLOBAL ===================== */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #fdfdfd;
+    margin: 20px;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* ===================== TABLEAU ===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+thead {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+thead th {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* ===================== FORMULAIRES ===================== */
+form {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #666;
+    outline: none;
+}
+
+/* ===================== BOUTONS ===================== */
+button {
+    padding: 8px 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    background-color: #444;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+/* Effet hover */
+button:hover {
+    background-color: #222;
+    border-color: #222;
+}
+
+/* Bouton Annuler (lien) */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a button,
+a[href] {
+    background-color: #888;
+    border: 1px solid #888;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 5px;
+    display: inline-block;
+}
+
+a button:hover,
+a[href]:hover {
+    background-color: #666;
+    border-color: #666;
+}
+
+/* Bouton Ajouter un adhérent (page liste) */
+body > button {
+    display: block;
+    margin: 20px auto;
+    background-color: #444;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+body > button:hover {
+    background-color: #222;
+    border-color: #222;
+}
+
+body > button a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}

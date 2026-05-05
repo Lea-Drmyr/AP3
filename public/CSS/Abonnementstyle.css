@@ -1,0 +1,207 @@
+/* ===================== STYLE GLOBAL ===================== */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #fdfdfd;
+    margin: 20px;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* ===================== TABLEAU ===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    font-size: 14px;
+    border: 1px solid #444;   /* Bord principal du tableau */
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+thead th {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #444;   /* Bord des en-têtes */
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;   /* Bord des cellules */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* ===================== FORMULAIRES ===================== */
+form {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #444;
+    outline: none;
+}
+
+/* ===================== BOUTONS ===================== */
+button {
+    padding: 8px 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    background-color: #444;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #222;
+    border-color: #222;
+}
+
+/* Bouton Annuler (lien) */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a button,
+a[href] {
+    background-color: #888;
+    border: 1px solid #888;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 5px;
+    display: inline-block;
+}
+
+a button:hover,
+a[href]:hover {
+    background-color: #666;
+    border-color: #666;
+}
+
+/* Bouton Ajouter un abonnement (page liste) */
+body > button {
+    display: block;
+    margin: 20px auto;
+    background-color: #444;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+body > button:hover {
+    background-color: #222;
+    border-color: #222;
+}
+
+body > button a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+/* ===================== SUPPRESSION ===================== */
+.delete-section {
+    max-width: 480px;
+    margin: 20px auto;
+    background-color: #fff5f5;   /* léger fond rouge pâle */
+    border: 1px solid #e0b4b4;   /* bord rouge doux */
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.delete-section p {
+    color: #a94442;              /* texte rouge foncé */
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Bouton confirmer suppression */
+button.delete-confirm {
+    background-color: #c0392b;
+    border: 1px solid #c0392b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button.delete-confirm:hover {
+    background-color: #a93226;
+    border-color: #a93226;
+}
+
+/* Bouton annuler */
+button.delete-cancel,
+a.delete-cancel {
+    background-color: #888;
+    border: 1px solid #888;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+button.delete-cancel:hover,
+a.delete-cancel:hover {
+    background-color: #666;
+    border-color: #666;
+}
