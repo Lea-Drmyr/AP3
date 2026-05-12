@@ -11,7 +11,7 @@ class HomeControllers extends BaseController
        
         return view('Pages/Home');
     }
-
+  
     public function Patterns(): string
     {
         return view('Pages/Patterns');
