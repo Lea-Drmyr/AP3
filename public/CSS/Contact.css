@@ -1,0 +1,315 @@
+/* ===================== STYLE GLOBAL ===================== */
+body {
+    font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #f8d7ec, #f5e6ff);
+    margin: 0;
+    padding: 0;
+    color: #2d2d2d;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ===================== NAVBAR ===================== */
+#mainNav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #b04b91 !important;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #444 !important;
+    font-weight: 500;
+    margin-left: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #d86bb3;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d86bb3 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===================== HEADER ===================== */
+.masthead {
+    padding: 140px 20px;
+    text-align: center;
+    background: linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ),
+    url("../assets/img/patterns.jpg");
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.page-heading h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #b04b91;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(255,255,255,0.8);
+}
+
+.page-heading .subheading {
+    font-size: 1.3rem;
+    color: #555;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+/* ===================== TEXTE INTRO ===================== */
+main p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255,255,255,0.7);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* ===================== FORMULAIRE ===================== */
+#contactForm {
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 30px;
+    margin-top: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* ===================== CHAMPS ===================== */
+.form-floating {
+    margin-bottom: 22px;
+}
+
+.form-control {
+    border-radius: 18px !important;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+    padding: 18px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 4px rgba(216,107,179,0.25);
+    border: none;
+}
+
+/* ===================== LABELS ===================== */
+.form-floating label {
+    color: #777;
+    padding-left: 15px;
+}
+
+/* ===================== BOUTONS ===================== */
+.btn-rose,
+#openBtn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #d86bb3, #b04b91);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(216,107,179,0.3);
+    cursor: pointer;
+}
+
+.btn-rose:hover,
+#openBtn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #e57bc0, #c0579d);
+    box-shadow: 0 6px 18px rgba(216,107,179,0.4);
+}
+
+.btn-rose:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===================== POPUP ===================== */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(176,75,145,0.35);
+    backdrop-filter: blur(5px);
+}
+
+.popup-content {
+    position: relative;
+    margin: 8% auto;
+    padding: 35px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 30px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b04b91;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #d86bb3;
+}
+
+/* ===================== TABLEAU ===================== */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: #d86bb3;
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    background: rgba(248,215,236,0.45);
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* ===================== MAP ===================== */
+.map-container {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    padding: 30px 0;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    margin-top: 60px;
+    text-align: center;
+}
+
+footer .fa-stack {
+    color: #b04b91;
+    transition: all 0.3s ease;
+}
+
+footer .fa-stack:hover {
+    color: #d86bb3;
+    transform: scale(1.1);
+}
+
+footer .small {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+
+    .page-heading h1 {
+        font-size: 2.4rem;
+    }
+
+    .page-heading .subheading {
+        font-size: 1rem;
+    }
+
+    #contactForm {
+        padding: 25px;
+    }
+
+    .popup-content {
+        width: 92%;
+        padding: 25px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .btn-rose,
+    #openBtn {
+        width: 100%;
+    }
+}

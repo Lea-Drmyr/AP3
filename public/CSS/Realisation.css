@@ -54,15 +54,13 @@ body {
 
 /* ===================== HEADER ===================== */
 .masthead {
-    padding: 120px 20px;
+    padding: 140px 20px;
     text-align: center;
-    background:
-        linear-gradient(
-            rgba(255,255,255,0.75),
-            rgba(255,255,255,0.75)
-        ),
-        url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80");
-
+    background: linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ),
+    url("../assets/img/patterns.jpg");
     background-size: cover;
     background-position: center;
     border-bottom-left-radius: 40px;
@@ -70,7 +68,7 @@ body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-.site-heading h1 {
+.page-heading h1 {
     font-size: 3.5rem;
     font-weight: 700;
     color: #b04b91;
@@ -78,47 +76,96 @@ body {
     text-shadow: 2px 2px 8px rgba(255,255,255,0.8);
 }
 
-.site-heading .subheading {
+.page-heading .subheading {
     font-size: 1.3rem;
     color: #555;
     font-style: italic;
     letter-spacing: 1px;
 }
 
-/* ===================== MAIN CONTENT ===================== */
-main {
-    padding: 60px 20px;
-}
 
-main p {
+/* ===================== TEXTE INTRO ===================== */
+.container p {
     text-align: center;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: #444;
-    max-width: 700px;
-    margin: auto;
+    max-width: 850px;
+    margin: 40px auto;
     background: rgba(255,255,255,0.7);
-    padding: 25px;
-    border-radius: 20px;
+    padding: 30px;
+    border-radius: 25px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-/* ===================== BUTTONS ===================== */
-.btn-custom {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #d86bb3, #b04b91);
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(216,107,179,0.3);
+/* ===================== TITRES ===================== */
+h2 {
+    color: #b04b91;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+/* ===================== BLOCS VIDÉOS ===================== */
+.post-preview {
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 35px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.35);
 }
 
-.btn-custom:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(216,107,179,0.4);
+.post-preview:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(176,75,145,0.18);
+}
+
+/* ===================== TITRES ===================== */
+.post-title {
+    margin-bottom: 12px;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: #b04b91;
+    font-size: 1.7rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: #d86bb3;
+}
+
+.post-subtitle {
+    font-size: 1.05rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* ===================== META ===================== */
+.post-meta {
+    margin-top: 12px;
+    color: #777;
+    font-style: italic;
+}
+
+.post-meta a {
+    color: #b04b91;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.post-meta a:hover {
+    color: #d86bb3;
+}
+
+/* ===================== TEXTE BAS ===================== */
+.container p:last-child {
+    margin-top: 40px;
 }
 
 /* ===================== FOOTER ===================== */
@@ -129,10 +176,6 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.4);
     margin-top: 60px;
     text-align: center;
-}
-
-footer .list-inline {
-    margin-bottom: 15px;
 }
 
 footer .fa-stack {
@@ -153,12 +196,24 @@ footer .small {
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
 
-    .site-heading h1 {
-        font-size: 2.3rem;
+    .post-heading h1 {
+        font-size: 2.4rem;
     }
 
-    .site-heading .subheading {
+    .post-heading .subheading {
         font-size: 1rem;
+    }
+
+    .post-preview {
+        padding: 22px;
+    }
+
+    .post-title a {
+        font-size: 1.3rem;
+    }
+
+    .post-subtitle {
+        font-size: 0.95rem;
     }
 
     main p {

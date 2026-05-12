@@ -11,4 +11,24 @@ class HomeControllers extends BaseController
        
         return view('Pages/Home');
     }
+
+    public function Patterns(): string
+    {
+        return view('Pages/Patterns');
+    }
+    
+    public function Realisation(): string
+    {
+        return view('Pages/Realisation');
+    }
+    
+    public function Adhesion(): string
+    {
+        return view('Pages/Adhesion');
+    }
+
+    public function Contact(): string
+    {
+        return view('Pages/Contact');
+    }
 }

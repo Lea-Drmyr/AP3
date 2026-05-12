@@ -5,25 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>AP3</title>
-    <link rel="stylesheet" href="<?= base_url('CSS/homestyle.css') ?>">
+        <title>L'Atelier Couture</title>
+        <link rel="stylesheet" href="<?= base_url('CSS/homestyle.css') ?>">
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="Index.php">AP1</a>
+                <a class="navbar-brand" href="Index.php">AP3</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Index.php">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="pages/Patterns.html">Patron</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="pages/Realisation.html">Realisation</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="pages/Adhesion.php">Adhésion</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="pages/contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Home">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Patterns">Patron</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Realisation">Realisation</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Adhesion">Adhésion</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Contact">Contact</a></li>
                         <li class="dropdown"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= site_url("/login")?>">Se Connecter</a></li>
 
                     </ul>
@@ -31,13 +31,13 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead">
+        <header class="masthead" style="background-image: url('assets/img/home.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1>AP3</h1>
-                            <span class="subheading">DURRMEYER Léa</span>
+                            <h1>La Maison Couture</h1>
+                            <span class="subheading">Un site d'aide en couture par DURRMEYER Léa</span>
                         </div>
                     </div>
                 </div>
@@ -49,6 +49,10 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <p>Bienvenue!</p>
+                        <p>Voici un petit site, créé par une étudiante de BTS SIO. <br>
+                        Ici je te propose des aides pour la couture, aussi bien pour débuter que pour quelqu'un d'expérimenté.</p>
+                        <p>Tu trouvera des liens vers des sites proposants des patrons dans l'onglet "Patron". Mais tu trouvera également des liens vers des vidéos et sites explicatifsh dans l'onglet "Realisation". <br>
+                        Enfin, tu aura les tarifs d'adhésion et le formulaire d'adhesion dans l'onglet "Adhésion" et de quoi nous contacter dans l'onglet "Contact" avec également le plan et les horraires.</p>
                     </div>
                 </div>
             </div>
@@ -84,7 +88,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy;Lea</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy;La Maison Couture</div>
                     </div>
                 </div>
             </div>

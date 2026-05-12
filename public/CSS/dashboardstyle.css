@@ -14,7 +14,79 @@ body {
     padding: 20px;
     text-align: center;
 }
+/* ===================== NAVBAR ===================== */
+#mainNav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 12px 0;
+}
 
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #b04b91 !important;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #444 !important;
+    font-weight: 500;
+    margin-left: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #d86bb3;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d86bb3 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===================== HEADER ===================== */
+.masthead {
+    padding: 140px 20px;
+    text-align: center;
+    background: linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ),
+    url("../assets/img/patterns.jpg");
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.page-heading h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #b04b91;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(255,255,255,0.8);
+}
+
+.page-heading .subheading {
+    font-size: 1.3rem;
+    color: #555;
+    font-style: italic;
+    letter-spacing: 1px;
+}
 /* ===================== TITRE ===================== */
 h1 {
     color: #333;

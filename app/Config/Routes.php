@@ -5,7 +5,13 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+//--------- HEADER -------------
 $routes->get('/', 'HomeControllers::index');
+$routes->get('/Home', 'HomeControllers::Index');
+$routes->get('/Patterns', 'HomeControllers::Patterns');
+$routes->get('/Realisation', 'HomeControllers::Realisation');
+$routes->get('/Adhesion', 'HomeControllers::Adhesion');
+$routes->get('/Contact', 'HomeControllers::Contact');
 
 //------------------LOGIN------------------------------------
 $routes->get('/login', 'Auth::index');
@@ -53,3 +59,4 @@ $routes->post('login/login', 'AuthAPI::login');
 $routes->group('api', ['filter' => 'jwt'], function ($routes) {
 $routes->resource('AdherentController');
 });
+
