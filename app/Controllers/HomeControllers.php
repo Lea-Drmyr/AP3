@@ -4,7 +4,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
 
-class HomeControllers extends BaseController
+class HomeControllers extends BaseController   
 {
     public function index()
     {
