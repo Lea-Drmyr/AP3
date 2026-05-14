@@ -50,6 +50,7 @@ class AdherentController extends ResourceController
         return $this->respondCreated($json);
     }
 
+
     public function update($id = null)
     {
         $json = $this->request->getJSON(true);
@@ -81,5 +82,6 @@ class AdherentController extends ResourceController
         return $this->failServerError(utf8_encode($e->getMessage()));
     }
 }
+
 }
 

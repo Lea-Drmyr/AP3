@@ -12,6 +12,11 @@ $routes->get('/Patterns', 'HomeControllers::Patterns');
 $routes->get('/Realisation', 'HomeControllers::Realisation');
 $routes->get('/Adhesion', 'HomeControllers::Adhesion');
 $routes->get('/Contact', 'HomeControllers::Contact');
+$routes->get('/Profil', 'Adherent::Profil');
+
+$routes->get('/modifierAdherent/(:num)', 'Adherent::modifier/$1');
+$routes->post('/update', 'Adherent::update');
+
 
 //------------------LOGIN------------------------------------
 $routes->get('/login', 'Auth::index');
@@ -21,6 +26,8 @@ $routes->get('login/register', 'Auth::creerAdherent');
 $routes->get('/unauthorized', function() {
     return view('errors/unauthorized');
 });
+$routes->get('/logout', 'Auth::logout');
+
 //------------------ABONNEMENT------------------------------------
 $routes->group('abonnement', ['filter' => 'login:Admin'], function($routes) { 
 

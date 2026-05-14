@@ -50,6 +50,7 @@ class Adherent extends BaseController
 
         return redirect()->to('/adherents');
     }
+
     public function modifierAdherent($id)
     {
         $model = new Adherents_Model();
@@ -67,9 +68,9 @@ class Adherent extends BaseController
 {
     $model = new Adherents_Model();
     $id = $this->request->getPost('idAdherents');
-
+    $adherent = $model->find($id);
     // Vérifie que l'ID est bien présent et existe
-    if (!$id || !$model->find($id)) {
+    if (!$adherent) {
         return redirect()->to('/adherents');
     }
 
@@ -82,14 +83,42 @@ class Adherent extends BaseController
         'adresse'       => $this->request->getPost('adresse')
     ];
 
-    // Si mot de passe modifié
+    //Si mot de passe modifié
     if ($this->request->getPost('MotDePasse')) {
         $data['MotDePasse'] = password_hash($this->request->getPost('MotDePasse'), PASSWORD_DEFAULT);
     }
 
     $model->update($id, $data);
 
-    return redirect()->to('/adherents');
+        $model->resetQuery();
+        $adherent = $model->find($id);
+
+        
+        session()->set([
+                'nom' => $adherent['nom'],
+                'prenom' => $adherent['prenom'],
+                'mail' => $adherent['mail'],
+                'numTel' => $adherent['numTel'],
+                'adresse' => $adherent['adresse']
+            ]);
+
+
+    return redirect()->to('/Home');
 }
+
+
+public function modifier($id){
+        $model = new \App\Models\Adherents_Model();
+        $adherent = $model->find($id);
+        if(!$adherent){
+            return redirect()->to('/Home');
+        }
+        return view('adherents/modifierAdherent', ['adherent' => $adherent]);
+    }
+
+    public function Profil()
+    {
+       return view('Pages/Profil');
+    }
 
 }

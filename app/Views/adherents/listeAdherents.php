@@ -56,6 +56,8 @@
     <button>
         <a href="<?= site_url('adherents/createAdherent') ?>">Ajouter un adhérent</a>
     </button>
-
+    <button>
+        <li class="nav-item"><a class="nav-link" href="dashboard"> DashBoard</a></li>
+    </button>
 </body>
 </html>

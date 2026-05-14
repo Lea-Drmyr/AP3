@@ -17,9 +17,9 @@
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+                <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">La Maison Couture</a>
+                <a class="navbar-brand">AP3</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -32,6 +32,16 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Adhesion">Adhésion</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Contact">Contact</a></li>
                     </ul>
+                    <?php if(session()->get('isLoggedIn')): ?>
+                            <a href="Profil" class="btn btn-outline-light me-2">Profil</a>
+                            <?php if(session()->get('Role') == 'Admin'):?>
+                              <li class="nav-item"><a class="nav-link" href="dashboard"> DashBoard</a></li>
+                            <?php endif; ?>
+                        <?php else: ?>
+                        <div class="d-flex">
+                            <a href="<?= site_url("/login")?>" class="btn btn-outline-light me-2">Se Connecter</a>
+                        </div>
+                     <?php endif; ?>
                 </div>
             </div>
         </nav>

@@ -9,7 +9,7 @@
 <body>
     <h1>Modifier l'adhérent</h1>
 
-  <form action="<?= base_url('/adherents/update') ?>" method="post">
+  <form action="<?= base_url('/update') ?>" method="post">
     <input type="hidden" name="idAdherents" value="<?= esc($adherent['idAdherents']) ?>">
 
     <label for="nom">Nom :</label>

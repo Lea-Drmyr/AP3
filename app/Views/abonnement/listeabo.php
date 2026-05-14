@@ -38,6 +38,11 @@
     </tbody>
 </table>
 <br><br>
-<button><a href=<?= site_url('abonnement/createabo') ?> >Ajouter</a> </button> 
+    <button>
+        <a href=<?= site_url('abonnement/createabo') ?> >Ajouter</a> 
+    </button> 
+    <button>
+        <li class="nav-item"><a class="nav-link" href="dashboard"> DashBoard</a></li>
+    </button>
 </body>
 </html>   

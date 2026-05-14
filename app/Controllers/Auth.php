@@ -42,17 +42,24 @@ class Auth extends Controller
         if ($adherent && password_verify($this->request->getPost('MotDePasse'), $adherent['MotDePasse'])) {
 
             session()->set([
+                'idAdherents' => $adherent['idAdherents'],
                 'nom' => $adherent['nom'],
                 'prenom' => $adherent['prenom'],
                 'mail' => $adherent['mail'],
+                'numTel' => $adherent['numTel'],
+                'adresse' => $adherent['adresse'],
                 'Role' => $adherent['Role'],
                 'isLoggedIn' => true,
             ]);
-            return redirect()->to('/dashboard');
+            return redirect()->to('/Home');
         } else {
-            return redirect()->to('/')->with('error', 'Email ou mot de passe incorrect.');
+            return redirect()->to('/login')->with('error', 'Email ou mot de passe incorrect.');
         }
     }
 
-
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/Home');
+    }
 }

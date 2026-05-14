@@ -31,4 +31,5 @@ class HomeControllers extends BaseController
     {
         return view('Pages/Contact');
     }
+    
 }
